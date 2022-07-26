@@ -48,5 +48,9 @@ end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'bcrypt', '~> 3.1.7'
+gem 'dotenv-rails'
 gem 'fast_jsonapi'
 gem 'jwt'
+gem 'rack-cors'
+gem 'rest-client'

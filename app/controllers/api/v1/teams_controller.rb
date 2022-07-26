@@ -8,4 +8,5 @@ class Api::V1::TeamsController < ApplicationController
     @team = TeamsSerializer.new(Team.find(params[:id])).serialized_json
     render json: @team, status: :ok
   end
+
 end
