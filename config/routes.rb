@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+ 
+  namespace :api do
+   namespace :v1 do
+     resources :accounts, only: [:update]
+     resources :teams, only: [:index, :show]
+     resources :players, only: [:index, :show]
+     resources :users, only: [:index, :show]
+     resources :games, only: [:index, :show]
+     resources :bets, only: [:create, :update, :destroy]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+     get "auto_login", to: "auth#auto_login"
+     get "team_players", to: "players#team_players"
+     post "/signup", to: "auth#signup_user"
+     post "/login", to: "auth#login_user"
+
+    end
+  end
+
 end
