@@ -11,7 +11,7 @@ class Api::V1::BetsController < ApplicationController
       @user.accounts[0].update(balance: account)
       @bet = Bet.create(user_id: @user.id, game_id: bet_params['game'],
                         wager: bet_params['amount'], odds: bet_params['odds'],
-                        betType: bet_params['betType'])
+                        bet_type: bet_params['bet_type'])
 
       render json: UsersSerializer.new(@user).serialized_json, status: :ok
     end
@@ -20,6 +20,6 @@ class Api::V1::BetsController < ApplicationController
   private
 
   def bet_params
-    params.require(:bet).permit(:amount, :odds, :game, :betType)
+    params.require(:bet).permit(:amount, :odds, :game, :bet_type)
   end
 end

@@ -72,140 +72,141 @@ require 'json'
 
 ### START GET ALL PlAYERS ------------------------------------------------------
 
-# playersCounter = 0
-# #
-# 41.times do
-#   puts playersCounter
-#   response = RestClient.get("https://www.thesportsdb.com/api/v1/json/1/lookup_all_players.php?id=#{uefa_teams[playersCounter]}")
-#   data = JSON.parse(response)
+ playersCounter = 0
+ 
+ 1.times do
+   puts playersCounter
+   response = RestClient.get("https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=Gabriel%20Martinelli")
+   data = JSON.parse(response)
 
-#   players = data["player"]
+   players = data["player"]
 
-#   players.each do |player|
-#     nationality = player["strNationality"]
-#     full_name = player["strPlayer"]
-#     team_name = player["strTeam"]
-#     date_of_birth = player["dateBorn"]
-#     birth_location = player["strBirthLocation"]
-#     date_signed = player["dateBorn"]
-#     contracted_salary = player["strSigning"]
-#     wage = player["strWage"]
-#     description = player["strDescriptionEN"]
-#     position = player["strPosition"]
-#     height = player["strHeight"]
-#     weight = player["strWeight"]
-#     profile_image = player["strThumb"]
-#     thumbnail = player["strCutout"]
-#     team = Team.find_by(name: team_name)
-#     team_id = team.id
-# #
-#     Player.create(
-#       nationality: nationality,
-#       full_name: full_name,
-#       team_name: team_name,
-#       date_of_birth: date_of_birth,
-#       birth_location: birth_location,
-#       date_signed: date_signed,
-#       contracted_salary: contracted_salary,
-#       wage: wage,
-#       description: description,
-#       position: position,
-#       height: height,
-#       weight: weight,
-#       profile_image: profile_image,
-#       thumbnail: thumbnail,
-#       team_id: team_id,
-#     )
-#     puts full_name
-#   end
-# #
-#   playersCounter += 1
-#   puts playersCounter
-# end
+   players.each do |player|
+     nationality = player["strNationality"]
+     full_name = player["strPlayer"]
+     team_name = player["strTeam"]
+     date_of_birth = player["dateBorn"]
+     birth_location = player["strBirthLocation"]
+     date_signed = player["dateBorn"]
+     contracted_salary = player["strSigning"]
+     wage = player["strWage"]
+     description = player["strDescriptionEN"]
+     position = player["strPosition"]
+     height = player["strHeight"]
+     weight = player["strWeight"]
+     profile_image = player["strThumb"]
+     thumbnail = player["strCutout"]
+     team = Team.find_by(name: team_name)
+     team_id = team.id
+ 
+     Player.create(
+       nationality: nationality,
+       full_name: full_name,
+       team_name: team_name,
+       date_of_birth: date_of_birth,
+       birth_location: birth_location,
+       date_signed: date_signed,
+       contracted_salary: contracted_salary,
+       wage: wage,
+       description: description,
+       position: position,
+       height: height,
+       weight: weight,
+       profile_image: profile_image,
+       thumbnail: thumbnail,
+       team_id: team_id,
+     )
+     puts full_name
+   end
+ 
+
+  playersCounter += 1
+  puts playersCounter
+end
 
 ### END GET ALL PlAYERS --------------------------------------------------------
 
 ### Random Matchup of for gamees  ----------------------------------------------
 #
-  Game.create(
-    home_team_id: 19,
-    away_team_id: 23,
-    match_name: "#{Team.all[0].name} vs. #{Team.all[1].name}",
-    match_date: Time.new(2022, 07, 27),
-    match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
-    location: "Wembly Stadium",
-    street: nil,
-    street_2: nil,
-    city: "London",
-    state: nil,
-    country: "England",
-    zip: "HA9 0WS",
-    one: "1.75",
-    draw: "3.35",
-    two: "0.75",
-    one_draw: "2.75",
-    two_draw: "1.35"
-  )
+#   Game.create(
+#     home_team_id: 19,
+#     away_team_id: 23,
+#     match_name: "#{Team.all[0].name} vs. #{Team.all[1].name}",
+#     match_date: Time.new(2022, 07, 27),
+#     match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
+#     location: "Wembly Stadium",
+#     street: nil,
+#     street_2: nil,
+#     city: "London",
+#     state: nil,
+#     country: "England",
+#     zip: "HA9 0WS",
+#     one: "1.75",
+#     draw: "3.35",
+#     two: "0.75",
+#     one_draw: "2.75",
+#     two_draw: "1.35"
+#   )
 
-  Game.create(
-    home_team_id: 22,
-    away_team_id: 25,
-    match_name: "#{Team.all[2].name} vs. #{Team.all[3].name}",
-    match_date: Time.new(2022, 07, 27),
-    match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
-    location: "Wembly Stadium",
-    street: nil,
-    street_2: nil,
-    city: "London",
-    state: nil,
-    country: "England",
-    zip: "HA9 0WS",
-    one: "1.75",
-    draw: "3.35",
-    two: "0.75",
-    one_draw: "2.75",
-    two_draw: "1.35"
-  )
-#
-  Game.create(
-    home_team_id: 24,
-    away_team_id: 19,
-    match_name: "#{Team.all[4].name} vs. #{Team.all[5].name}",
-    match_date: Time.new(2022, 07, 27),
-    match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
-    location: "Camp Nou",
-    street: "C. d'Aristides Maillol, 12",
-    street_2: nil,
-    city: "Barcelona",
-    state: nil,
-    country: "Spain",
-    zip: "08028",
-    one: "1.75",
-    draw: "3.35",
-    two: "0.75",
-    one_draw: "2.75",
-    two_draw: "1.35"
-  )
-#
-  Game.create(
-    home_team_id: 26,
-    away_team_id: 17,
-    match_name: "#{Team.all[6].name} vs. #{Team.all[7].name}",
-    match_date: Time.new(2022, 07, 27),
-    match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
-    location: "Camp Nou",
-    street: "C. d'Aristides Maillol, 12",
-    street_2: nil,
-    city: "Barcelona",
-    state: nil,
-    country: "Spain",
-    zip: "08028",
-    one: "1.75",
-    draw: "3.35",
-    two: "0.75",
-    one_draw: "2.75",
-    two_draw: "1.35"
-  )
+#   Game.create(
+#     home_team_id: 22,
+#     away_team_id: 25,
+#     match_name: "#{Team.all[2].name} vs. #{Team.all[3].name}",
+#     match_date: Time.new(2022, 07, 27),
+#     match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
+#     location: "Wembly Stadium",
+#     street: nil,
+#     street_2: nil,
+#     city: "London",
+#     state: nil,
+#     country: "England",
+#     zip: "HA9 0WS",
+#     one: "1.75",
+#     draw: "3.35",
+#     two: "0.75",
+#     one_draw: "2.75",
+#     two_draw: "1.35"
+#   )
+# #
+#   Game.create(
+#     home_team_id: 24,
+#     away_team_id: 19,
+#     match_name: "#{Team.all[4].name} vs. #{Team.all[5].name}",
+#     match_date: Time.new(2022, 07, 27),
+#     match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
+#     location: "Camp Nou",
+#     street: "C. d'Aristides Maillol, 12",
+#     street_2: nil,
+#     city: "Barcelona",
+#     state: nil,
+#     country: "Spain",
+#     zip: "08028",
+#     one: "1.75",
+#     draw: "3.35",
+#     two: "0.75",
+#     one_draw: "2.75",
+#     two_draw: "1.35"
+#   )
+# #
+#   Game.create(
+#     home_team_id: 26,
+#     away_team_id: 17,
+#     match_name: "#{Team.all[6].name} vs. #{Team.all[7].name}",
+#     match_date: Time.new(2022, 07, 27),
+#     match_time: Time.new(2022, 07, 27, 18, 0, 0, "+18:00"),
+#     location: "Camp Nou",
+#     street: "C. d'Aristides Maillol, 12",
+#     street_2: nil,
+#     city: "Barcelona",
+#     state: nil,
+#     country: "Spain",
+#     zip: "08028",
+#     one: "1.75",
+#     draw: "3.35",
+#     two: "0.75",
+#     one_draw: "2.75",
+#     two_draw: "1.35"
+#   )
 # #
 # ### End Random Matchup of for gamees  ------------------------------------------
 #
