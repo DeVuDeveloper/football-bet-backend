@@ -16,39 +16,11 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-<summary align="center">Table of Contents</summary>
 
-- 
-  - [Frontend Repository Link](#frontend-repository-link)
-  - [Screenshots](#screenshots)
-  - [Description 🏗️](#description-️)
-  - [Live Demo](#live-demo)
-  - [Getting Started 🏁](#getting-started-)
-    - [Prerequisites and Dependencies 📜](#prerequisites-and-dependencies-)
-      - [Setting Up PostgreSQL](#setting-up-postgresql)
-    - [Clone this repository](#clone-this-repository)
-    - [Move into the cloned directory with](#move-into-the-cloned-directory-with)
-  - [Setup](#setup)
-    - [Run linter](#run-linter)
-      - [Auto-correct](#auto-correct)
-    - [Run Project](#run-project)
-  - [Run tests](#run-tests)
-    - [Roadmap](#roadmap)
-  - [Built With 🔨](#built-with-)
-  - [Authors ✍️](#authors-️)
-  - [🤝 Contributors](#-contributors)
-  - [📝 License](#-license)
-  - [Show your support 💪](#show-your-support-)
-  - [Acknowledgments](#acknowledgments)
-</details>
+
 
 <!-- About the project -->
-[App screenshot](https://example.com)
-
-##  Screenshots
-![Screenshot]()
+[App screenshot]()
 
 ## Description 🏗️
 Backend for Football Betting React application. User Authentication, teams, players, games and betting. Seed for teams and players from real sport bet api.
