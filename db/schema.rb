@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_26_023506) do
     t.integer "away_team_id"
     t.date "match_date"
     t.time "match_time"
-    t.time "match_name"
+    t.string "match_name"
     t.string "location"
     t.string "one"
     t.string "draw"

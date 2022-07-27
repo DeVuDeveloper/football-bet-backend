@@ -5,7 +5,7 @@ class CreateGames < ActiveRecord::Migration[7.0]
       t.integer :away_team_id
       t.date :match_date
       t.time :match_time
-      t.time :match_name
+      t.string :match_name
       t.string :location
       t.string :one
       t.string :draw
