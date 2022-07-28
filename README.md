@@ -3,16 +3,17 @@
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <div align="center">
- ## Frontend Repository Link
-<a href="">Book A Car Frontend</a>
 
-  <a href="https://github.com/VuDej/sport-bet-backend#readme"><strong>Explore the docs »</strong></a>
+## Frontend Repository Link
+<a href="https://github.com/VuDej/football-bet-frontend">Football Bet Frontend</a>
+
+  <a href="https://github.com/VuDej/football-bet-backend#readme"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
-    <a href="https://github.com/VuDej/sport-bet-backend.git/issues">Report Bug</a>
+    <a href="https://github.com/VuDej/football-bet-backend.git/issues">Report Bug</a>
     ·
-    <a href="https://github.com/VuDej/sport-bet-backend.git/issues">Request Feature</a>
+    <a href="https://github.com/VuDej/football-bet-backend.git/issues">Request Feature</a>
   </p>
 </div>
 
@@ -65,12 +66,12 @@ You will be needing:
 ### Clone this repository
 
 ```bash
-git clone https://github.com/VuDej/sport-bet-backend.git
+git clone https://github.com/VuDej/football-bet-backend.git
 ```
 ### Move into the cloned directory with
 
   ```bash
-  cd sport-bet-backend
+  cd football-bet-backend
   ```
 
 ## Setup
@@ -198,7 +199,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 - Push to the Branch (git push origin feature/AmazingFeature)
 - Open a Pull Request
 
-Feel free to check the [issues page](https://github.com/VuDej/sport-bet-backend/issues).
+Feel free to check the [issues page](https://github.com/VuDej/football-bet-backend/issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
